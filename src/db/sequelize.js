@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const initModels = require("../models/init-models");
+const mysql2 = require("mysql2");
 require("dotenv").config();
 
 // connexion a la base donées
@@ -10,6 +11,7 @@ const sequelize = new Sequelize(
   {
     host: "bv4jbiuhigtwca7j0s1x-mysql.services.clever-cloud.com",
     dialect: "mysql",
+    dialectModule: mysql2,
     dialectOptions: {
       // timezone: "Etc/GMT-2",
     },
