@@ -18,6 +18,8 @@ app.get("/", (req, res) => {
 require("./src/routes/user/createUser")(app);
 require("./src/routes/user/updateUser")(app);
 require("./src/routes/user/deleteUser")(app);
+require("./src/routes/user/findUserById")(app);
+require("./src/routes/user/findAllUser")(app);
 
 /*login */
 require("./src/routes/auth/login")(app);
