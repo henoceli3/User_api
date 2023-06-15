@@ -17,7 +17,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     telephone: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: false,
+      unique: "utilisateur_mdp_unique"
     },
     photo_profile: {
       type: DataTypes.TEXT,
